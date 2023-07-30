@@ -210,10 +210,13 @@
           of this styling is to override it using the universal selector:
         </p>
 
-        <code><pre>* {
+        <code>
+<pre>
+* {
   margin: 0;
   padding: 0;
-}</pre>
+}
+</pre>
         </code>
 
         <p>
@@ -242,6 +245,36 @@
           <li><code>height</code></li>
         </ul>
       </article>
+    </article>
+
+    <article class="chapter">
+      <h2 class="chapter-heading">Ch. 37 Centering Our Page</h2>
+      <p>
+        A simple way to center the page would be to place the entire page's body into 
+        a container, then set that container's width to a constant value and set the 
+        left and right margin to auto:
+      </p>
+      
+      <code>
+<pre>
+&lt;head&gt;
+  ...
+  &lt;style&gt;
+    .container {
+      width: 800px;
+      margin: 0 auto;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="container"&gt;. . .&lt;/div&gt;
+&lt;/body&gt;
+</pre>
+      </code>
+
+      <p>
+        There is no specific element that semantically represents this container, so <code>&lt;div&gt;</code> is fine
+      </p>
     </article>
   </body>
 </html>
