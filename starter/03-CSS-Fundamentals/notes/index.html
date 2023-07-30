@@ -6,285 +6,287 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <article class="chapter">
-      <h2 class="chapter-heading">Ch 24. Styling Text</h2>
-      <p>Serif means those short, spike-like edges of text.</p>
-      <p>The style of an element affects the style of its child elements.</p>
-      <p>
-        The style 'text-align: center' positions the text at the center of
-        parent element.
-      </p>
-      <p>The default font-size is 16px.</p>
-    </article>
-
-    <article class="chapter">
-      <h2 class="chapter-heading">Ch. 25 Combining Selectors</h2>
-      <section class="chapter-sub-section">
-        <p>
-          A list of selectors can be supplied for a CSS rule (known as a
-          'list-selector').
-        </p>
-        <p>
-          A string of selectors, separated by white-space, can be supplied for a
-          CSS rule (known as a 'descendent-selector').
-        </p>
-      </section>
-
-      <article class="chapter-sub-section">
-        <h3 class="chapter-sub-section-heading">Descendent-Selectors</h3>
-        <p>
-          Descendent-selectors are incredibly useful, but if it is written as to
-          reflect the HTML structure, it will lead to code that is harder to
-          maintain in the future.
-        </p>
-      </article>
-    </article>
-
-    <article class="chapter">
-      <h2 class="chapter-heading">Ch. 26 Class and ID Selectors</h2>
-      <section class="chapter-sub-section">
-        <p>
-          By adding class and id attributes to elements, class and ID selectors
-          can be supplied for a CSS rule.
-        </p>
-        <p>An id attribute value may only be used once.</p>
-        <p>
-          It is a standard convention for classes and IDs comprising of multiple
-          words to be strung together by using dashes.
-        </p>
-        <p>
-          If multiple CSS rules apply to the same element, then technically they
-          all apply (more later).
-        </p>
-      </section>
-      <article class="chapter-sub-section">
-        <h3 class="chapter-sub-section-heading">Why use classes over IDs?</h3>
-        <p>
-          In the real world, using IDs often lead to more code refactoring, and
-          bugs when the project develops further. This is mitigated by using
-          classes over IDs, even if the CSS rule is only meant to be applied to
-          a single element.
-        </p>
-      </article>
-    </article>
-
-    <article class="chapter">
-      <h2 class="chapter-heading">Ch. 27 Working with Colors</h2>
-      <p>
-        When multiple of the same style is applied to an element, the last one
-        is taken (more later).
-      </p>
-      <p>
-        It is an industry standard to represent a color using the hexidecimal
-        model, or rgba if transparency (alpha) is desired.
-      </p>
-      <p>
-        It is not reasonable to memorize or know many colors, instead, using a
-        color picker is standard.
-      </p>
-      <p>
-        VSCode has a built-in color picker that can be accessed by typing any
-        hexidecimal value (#fff, for example), and then clicking this
-        hexidecimal value.
-      </p>
-      <p>
-        VSCode's color picker provides different models for values, which can
-        be cycled through by clicking the value at the top of the color
-        picker.
-      </p>
-      <p>
-        A short-hand property is a special property that can be used to define
-        multiple properties in a single declaration.
-      </p>
-    </article>
-
-    <article class="chapter">
-      <h2 class="chapter-heading">Ch. 29 Styling Links</h2>
-      <p>
-        It is not good practice to only use the element-selector for styling
-        links. Links have a few states, that can be selected in CSS by use of
-        specific pseudo-class selectors.
-      </p>
-      <p>Link pseudo-classes are always written in a specific order:</p>
-      <ul>
-        <li>:link</li>
-        <li>:visited</li>
-        <li>:hover</li>
-        <li>:active</li>
-      </ul>
-      <p>It may be useful to think of the acronym LVHA.</p>
-    </article>
-
-    <article class="chapter">
-      <h2 class="chapter-heading">Ch. 30 Using Chrome Dev Tools</h2>
-      <p>
-        Features within the Chrome Browser (and other browsers) that provide
-        additional tools to help developers.
-      </p>
-
-      <p>
-        Whilst inspecting an element, all of the CSS rules that were applied
-        to it are shown.
-      </p>
-
-      <p>Each CSS rule provides their source.</p>
-
-      <p>
-        The "User Agent Stylesheet" source is the default CSS for that element
-        selector.
-      </p>
-
-      <p>
-        The state of a link element can be 'forced' by ticking the
-        corresponding pseudo-class.
-      </p>
-    </article>
-
-    <article class="chapter">
-      <h2 class="chapter-heading">Ch. 31 CSS Theory #1: Conflicts Between Selectors</h2>
-      <img class="lecture-slide" src="img/conflicting_selectors_and_declarations.png" />
-      <img class="lecture-slide" src="img/resolving_conflicing_selectors.png" />
-      <section class="chapter-sub-section">
-        <p>
-          In VSCode, mousing over a CSS selector will show the "Selector
-          Specificity".
-        </p>
-        <p>
-          Selector Specificity indicates the priority of the selector, highest
-          to lowest priority read from left to right.
-        </p>
-      </section>
-    </article>
-
-    <article class="chapter">
-      <h2 class="chapter-heading">Ch. 32 CSS Theory #2: Inheritance and the Universal Selector</h2>
-      <section class="chapter-sub-section">
-        <p>
-          An inherited property is very easily overwritten by any rule which has
-          a value for that same property.
-        </p>
-        <p>
-          Inheritance does not conflict with other selectors, rather,
-          inheritance works by applying styles to all child elements.
-        </p>
-      </section>
-      <img class="lecture-slide" src="img/how_inheritance_works.png" />
-      <p class="chapter-sub-section">
-        By contrast, the universal selector applies to every element, and thus
-        can conflict with other selectors.
-      </p>
-    </article>
-
-    <article class="chapter">
-      <h2 class="chapter-heading">Ch. 33 Challenge #1</h2>
-      <a href="../challenge/1/">Challenge #1</a>
-    </article>
-
-    <article class="chapter">
-      <h2 class="chapter-heading">Ch. 34 CSS Theory #3: The CSS Box Model</h2>
-      <p class="chapter-sub-section">
-        The box model defines how elements are displayed, and sized on a webpage.
-      </p>
-      <img src="img/ch34_the_box_model.png" alt="The Box Model" class="lecture-slide">
-      <img src="img/ch34_element_height_and_width_calculation.png" alt="Element Height and Width Calculation" class="lecture-slide">
-    </article>
-
-    <article class="chapter">
-      <h2 class="chapter-heading">Ch. 35 Using Margins and Paddings</h2>
-
-      <article class="chapter-sub-section">
-        <h3 class="chapter-sub-section-heading">New Properties:</h3>
-        <ul>
-          <li>padding</li>
-          <li>padding-top</li>
-          <li>padding-bottom</li>
-          <li>padding-left</li>
-          <li>padding-right</li>
-          <li>margin</li>
-          <li>margin-top</li>
-          <li>margin-bottom</li>
-          <li>margin-left</li>
-          <li>margin-right</li>
-        </ul>
-      </article>
-
-      <article class="chapter-sub-section">
-        <h3 class="chapter-sub-section-heading">Global Reset</h3>
-        <p>
-          Browsers add default styling to elements that may not be desirable, and an effecient way to remove some
-          of this styling is to override it using the universal selector:
-        </p>
-
-        <code>
-<pre>
-* {
-  margin: 0;
-  padding: 0;
-}
-</pre>
-        </code>
-
-        <p>
-          Lists require spacing to show the numbering or bullets, so along with the global reset, margin should be added
-          to the left side of them.
-        </p>
-      </article>
-
-      <p class="chapter-sub-section">
-        Use <code>margin-top</code> and <code>margin-bottom</code> to create vertical space. It is best practice to only
-        use one of these styles.
-      </p>
-
-      <article class="chapter-sub-section">
-        <h3 class="chapter-sub-section-heading">Collapsing Margins</h3>
-        <p>
-          When two margins would occupy the same space, only the larger one of the two is effective.
-        </p>
-      </article>
-
+    <div class="page-container">
       <article class="chapter">
-        <h2 class="chapter-heading">Ch. 36 Adding Dimensions</h2>
-        <h3 class="chapter-sub-section-heading">New Properties:</h3>
-        <ul>
-          <li><code>width</code></li>
-          <li><code>height</code></li>
-        </ul>
+        <h2 class="chapter-heading">Ch 24. Styling Text</h2>
+        <p>Serif means those short, spike-like edges of text.</p>
+        <p>The style of an element affects the style of its child elements.</p>
+        <p>
+          The style 'text-align: center' positions the text at the center of
+          parent element.
+        </p>
+        <p>The default font-size is 16px.</p>
       </article>
-    </article>
-
-    <article class="chapter">
-      <h2 class="chapter-heading">Ch. 37 Centering Our Page</h2>
-      <p>
-        A simple way to center the page would be to place the entire page's body into 
-        a container, then set that container's width to a constant value and set the 
-        left and right margin to auto:
-      </p>
-
-      <code>
-<pre>
-&lt;head&gt;
-  ...
-  &lt;style&gt;
-    .container {
-      width: 800px;
-      margin: 0 auto;
-    }
-  &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-  &lt;div class="container"&gt;. . .&lt;/div&gt;
-&lt;/body&gt;
-</pre>
-      </code>
-
-      <p>
-        There is no specific element that semantically represents this container, so <code>&lt;div&gt;</code> is fine
-      </p>
-    </article>
-
-    <article class="chapter">
-      <h2 class="chapter-heading">Ch. 38 Challenge #2</h2>
-      <a href="../challenge/2/">Challenge #2</a>
-    </article>
+  
+      <article class="chapter">
+        <h2 class="chapter-heading">Ch. 25 Combining Selectors</h2>
+        <section class="chapter-sub-section">
+          <p>
+            A list of selectors can be supplied for a CSS rule (known as a
+            'list-selector').
+          </p>
+          <p>
+            A string of selectors, separated by white-space, can be supplied for a
+            CSS rule (known as a 'descendent-selector').
+          </p>
+        </section>
+  
+        <article class="chapter-sub-section">
+          <h3 class="chapter-sub-section-heading">Descendent-Selectors</h3>
+          <p>
+            Descendent-selectors are incredibly useful, but if it is written as to
+            reflect the HTML structure, it will lead to code that is harder to
+            maintain in the future.
+          </p>
+        </article>
+      </article>
+  
+      <article class="chapter">
+        <h2 class="chapter-heading">Ch. 26 Class and ID Selectors</h2>
+        <section class="chapter-sub-section">
+          <p>
+            By adding class and id attributes to elements, class and ID selectors
+            can be supplied for a CSS rule.
+          </p>
+          <p>An id attribute value may only be used once.</p>
+          <p>
+            It is a standard convention for classes and IDs comprising of multiple
+            words to be strung together by using dashes.
+          </p>
+          <p>
+            If multiple CSS rules apply to the same element, then technically they
+            all apply (more later).
+          </p>
+        </section>
+        <article class="chapter-sub-section">
+          <h3 class="chapter-sub-section-heading">Why use classes over IDs?</h3>
+          <p>
+            In the real world, using IDs often lead to more code refactoring, and
+            bugs when the project develops further. This is mitigated by using
+            classes over IDs, even if the CSS rule is only meant to be applied to
+            a single element.
+          </p>
+        </article>
+      </article>
+  
+      <article class="chapter">
+        <h2 class="chapter-heading">Ch. 27 Working with Colors</h2>
+        <p>
+          When multiple of the same style is applied to an element, the last one
+          is taken (more later).
+        </p>
+        <p>
+          It is an industry standard to represent a color using the hexidecimal
+          model, or rgba if transparency (alpha) is desired.
+        </p>
+        <p>
+          It is not reasonable to memorize or know many colors, instead, using a
+          color picker is standard.
+        </p>
+        <p>
+          VSCode has a built-in color picker that can be accessed by typing any
+          hexidecimal value (#fff, for example), and then clicking this
+          hexidecimal value.
+        </p>
+        <p>
+          VSCode's color picker provides different models for values, which can
+          be cycled through by clicking the value at the top of the color
+          picker.
+        </p>
+        <p>
+          A short-hand property is a special property that can be used to define
+          multiple properties in a single declaration.
+        </p>
+      </article>
+  
+      <article class="chapter">
+        <h2 class="chapter-heading">Ch. 29 Styling Links</h2>
+        <p>
+          It is not good practice to only use the element-selector for styling
+          links. Links have a few states, that can be selected in CSS by use of
+          specific pseudo-class selectors.
+        </p>
+        <p>Link pseudo-classes are always written in a specific order:</p>
+        <ul>
+          <li>:link</li>
+          <li>:visited</li>
+          <li>:hover</li>
+          <li>:active</li>
+        </ul>
+        <p>It may be useful to think of the acronym LVHA.</p>
+      </article>
+  
+      <article class="chapter">
+        <h2 class="chapter-heading">Ch. 30 Using Chrome Dev Tools</h2>
+        <p>
+          Features within the Chrome Browser (and other browsers) that provide
+          additional tools to help developers.
+        </p>
+  
+        <p>
+          Whilst inspecting an element, all of the CSS rules that were applied
+          to it are shown.
+        </p>
+  
+        <p>Each CSS rule provides their source.</p>
+  
+        <p>
+          The "User Agent Stylesheet" source is the default CSS for that element
+          selector.
+        </p>
+  
+        <p>
+          The state of a link element can be 'forced' by ticking the
+          corresponding pseudo-class.
+        </p>
+      </article>
+  
+      <article class="chapter">
+        <h2 class="chapter-heading">Ch. 31 CSS Theory #1: Conflicts Between Selectors</h2>
+        <img class="lecture-slide" src="img/conflicting_selectors_and_declarations.png" />
+        <img class="lecture-slide" src="img/resolving_conflicing_selectors.png" />
+        <section class="chapter-sub-section">
+          <p>
+            In VSCode, mousing over a CSS selector will show the "Selector
+            Specificity".
+          </p>
+          <p>
+            Selector Specificity indicates the priority of the selector, highest
+            to lowest priority read from left to right.
+          </p>
+        </section>
+      </article>
+  
+      <article class="chapter">
+        <h2 class="chapter-heading">Ch. 32 CSS Theory #2: Inheritance and the Universal Selector</h2>
+        <section class="chapter-sub-section">
+          <p>
+            An inherited property is very easily overwritten by any rule which has
+            a value for that same property.
+          </p>
+          <p>
+            Inheritance does not conflict with other selectors, rather,
+            inheritance works by applying styles to all child elements.
+          </p>
+        </section>
+        <img class="lecture-slide" src="img/how_inheritance_works.png" />
+        <p class="chapter-sub-section">
+          By contrast, the universal selector applies to every element, and thus
+          can conflict with other selectors.
+        </p>
+      </article>
+  
+      <article class="chapter">
+        <h2 class="chapter-heading">Ch. 33 Challenge #1</h2>
+        <a href="../challenge/1/">Challenge #1</a>
+      </article>
+  
+      <article class="chapter">
+        <h2 class="chapter-heading">Ch. 34 CSS Theory #3: The CSS Box Model</h2>
+        <p class="chapter-sub-section">
+          The box model defines how elements are displayed, and sized on a webpage.
+        </p>
+        <img src="img/ch34_the_box_model.png" alt="The Box Model" class="lecture-slide">
+        <img src="img/ch34_element_height_and_width_calculation.png" alt="Element Height and Width Calculation" class="lecture-slide">
+      </article>
+  
+      <article class="chapter">
+        <h2 class="chapter-heading">Ch. 35 Using Margins and Paddings</h2>
+  
+        <article class="chapter-sub-section">
+          <h3 class="chapter-sub-section-heading">New Properties:</h3>
+          <ul>
+            <li>padding</li>
+            <li>padding-top</li>
+            <li>padding-bottom</li>
+            <li>padding-left</li>
+            <li>padding-right</li>
+            <li>margin</li>
+            <li>margin-top</li>
+            <li>margin-bottom</li>
+            <li>margin-left</li>
+            <li>margin-right</li>
+          </ul>
+        </article>
+  
+        <article class="chapter-sub-section">
+          <h3 class="chapter-sub-section-heading">Global Reset</h3>
+          <p>
+            Browsers add default styling to elements that may not be desirable, and an effecient way to remove some
+            of this styling is to override it using the universal selector:
+          </p>
+  
+          <code>
+  <pre>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  </pre>
+          </code>
+  
+          <p>
+            Lists require spacing to show the numbering or bullets, so along with the global reset, margin should be added
+            to the left side of them.
+          </p>
+        </article>
+  
+        <p class="chapter-sub-section">
+          Use <code>margin-top</code> and <code>margin-bottom</code> to create vertical space. It is best practice to only
+          use one of these styles.
+        </p>
+  
+        <article class="chapter-sub-section">
+          <h3 class="chapter-sub-section-heading">Collapsing Margins</h3>
+          <p>
+            When two margins would occupy the same space, only the larger one of the two is effective.
+          </p>
+        </article>
+  
+        <article class="chapter">
+          <h2 class="chapter-heading">Ch. 36 Adding Dimensions</h2>
+          <h3 class="chapter-sub-section-heading">New Properties:</h3>
+          <ul>
+            <li><code>width</code></li>
+            <li><code>height</code></li>
+          </ul>
+        </article>
+      </article>
+  
+      <article class="chapter">
+        <h2 class="chapter-heading">Ch. 37 Centering Our Page</h2>
+        <p>
+          A simple way to center the page would be to place the entire page's body into 
+          a container, then set that container's width to a constant value and set the 
+          left and right margin to auto:
+        </p>
+  
+        <code>
+  <pre>
+  &lt;head&gt;
+    ...
+    &lt;style&gt;
+      .container {
+        width: 800px;
+        margin: 0 auto;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="container"&gt;. . .&lt;/div&gt;
+  &lt;/body&gt;
+  </pre>
+        </code>
+  
+        <p>
+          There is no specific element that semantically represents this container, so <code>&lt;div&gt;</code> is fine
+        </p>
+      </article>
+  
+      <article class="chapter">
+        <h2 class="chapter-heading">Ch. 38 Challenge #2</h2>
+        <a href="../challenge/2/">Challenge #2</a>
+      </article>
+    </div>
   </body>
 </html>

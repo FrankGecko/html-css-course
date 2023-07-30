@@ -1,12 +1,17 @@
-img {
-  width: 1000px;
-}
-
 * {
   margin: 0;
   padding: 0;
   color: #444;
   background-color: #f7f7f7;
+}
+
+.page-container {
+  width: 825px;
+  margin: 50px auto;
+}
+
+img {
+  width: 100%;
 }
 
 p {
