@@ -178,7 +178,7 @@ color: blue;
             By adding class and id attributes to elements, class and ID selectors
             can be supplied for a CSS rule.
           </p>
-          <p>An id attribute value may only be used once.</p>
+          <p>An ID may only appear once within the html code, whereas a class may appear any number of times.</p>
           <p>
             It is a standard convention for classes and IDs comprising of multiple
             words to be strung together by using dashes.
@@ -187,6 +187,43 @@ color: blue;
             If multiple CSS rules apply to the same element, then technically they
             all apply (more later).
           </p>
+          <section class="chapter-sub-section">
+            <h3 class="chapter-sub-section-heading">Examples</h3>
+            <article class="chapter-sub-section">
+              <h4 class="chapter-sub-section-heading">ID Selector</h4>
+              <div class="chapter-sub-section">
+                <h5 class="chapter-sub-section-heading">style.css</h5>
+                <code>
+<pre>#author {
+  ...
+}</pre>
+                </code>
+              </div>
+              <div class="chapter-sub-section">
+                <h5 class="chapter-sub-section-heading">index.html</h5>
+                <code><pre>&lt;p id="author"&gt;...&lt;/p&gt;</pre></code>
+              </div>
+            </article>
+            <article class="chapter-sub-section">
+              <h4 class="chapter-sub-section-heading">Class Selector</h4>
+              <div class="chapter-sub-section">
+                <h5 class="chapter-sub-section-heading">style.css</h5>
+                <code>
+<pre>.author {
+  ...
+}</pre>
+                </code>
+              </div>
+              <div class="chapter-sub-section">
+                <h5 class="chapter-sub-section-heading">index.html</h5>
+                <code>
+<pre>&lt;p class="author"&gt;...&lt;/p&gt;
+&lt;p class="author"&gt;...&lt;/p&gt;
+</pre>
+                </code>
+              </div>
+            </article>
+          </section>
         </section>
         <article class="chapter-sub-section">
           <h3 class="chapter-sub-section-heading">Why use classes over IDs?</h3>
