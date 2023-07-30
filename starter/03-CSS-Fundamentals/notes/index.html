@@ -308,19 +308,29 @@ color: blue;
   
       <article class="chapter">
         <h2 class="chapter-heading">Ch. 29 Styling Links</h2>
-        <p>
-          It is not good practice to only use the element-selector for styling
-          links. Links have a few states, that can be selected in CSS by use of
-          specific pseudo-class selectors.
-        </p>
-        <p>Link pseudo-classes are always written in a specific order:</p>
-        <ul>
-          <li>:link</li>
-          <li>:visited</li>
-          <li>:hover</li>
-          <li>:active</li>
-        </ul>
-        <p>It may be useful to think of the acronym LVHA.</p>
+        <div class="chapter-sub-section">
+          <p>
+            It is not good practice to only use the element-selector for styling
+            links. Links have a few states, that can be selected in CSS by use of
+            specific pseudo-class selectors.
+          </p>
+          <p>Link pseudo-classes are always written in a specific order:</p>
+          <ul>
+            <li>:link</li>
+            <li>:visited</li>
+            <li>:hover</li>
+            <li>:active</li>
+          </ul>
+          <p>
+            deviating from this order typically results in undesirable css being applied 
+            to a particular state
+          </p>
+          <p>It may be useful to think of the acronym LVHA.</p>
+        </div>
+        <article class="chapter-sub-section">
+          <h3 class="chapter-sub-section-heading">New Property</h3>
+          <code>text-decoration</code>
+        </article>
       </article>
   
       <article class="chapter">
