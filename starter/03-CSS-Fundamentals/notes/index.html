@@ -15,31 +15,154 @@
       </article>
 
       <article class="chapter">
-        <h2 class="chapter-heading">Ch 24. Styling Text</h2>
-        <p>Serif means those short, spike-like edges of text.</p>
-        <p>The style of an element affects the style of its child elements.</p>
+        <h2 class="chapter-heading">Ch. 23 Inline, Internal and External CSS</h2>
+        <article class="chapter-sub-section">
+          <h3 class="chapter-sub-section-heading">Inline CSS</h3>
+          <article class="chapter-sub-section">
+            <h4 class="chapter-sub-section-heading">An Example of inline CSS</h4>
+            <code>
+<pre>
+&lt;h1 style="color: blue;"&gt;...&lt;/h1&gt;
+...
+&lt;h1 style="color: blue;"&gt;...&lt;/h1&gt;
+...
+</pre>
+            </code>
+          </article>
+        </article>
+
+        <article class="chapter-sub-section">
+          <h3 class="chapter-sub-section-heading">Internal CSS</h3>
+          <article class="chapter-sub-section">
+            <h4 class="chapter-sub-section-heading">An Example of Internal CSS</h4>
+            <code>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  ...
+  &lt;style&gt;
+    h1 { 
+      color: blue;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;...&lt;h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </code>
+          </article>
+        </article>
+
+        <article class="chapter-sub-section">
+          <h3 class="chapter-sub-section-heading">External CSS</h3>
+          <article class="chapter-sub-section">
+            <h4 class="chapter-sub-section-heading">An Example of External CSS</h4>
+            <h5 class="chapter-sub-section-heading">style.css</h5>
+            <code>
+<pre>
+h1 { 
+color: blue;
+}
+</pre>
+            </code>
+            
+            <h5 class="chapter-sub-section-heading">index.html</h5>
+            <code>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  ...
+  &lt;link href="style.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;...&lt;h1&gt;
+  ...
+  &lt;h1&gt;...&lt;h1&gt;
+  ...
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+          </code>
+        </article>
+
+        <article class="chapter-sub-section">
+          <h3 class="chapter-sub-section-heading">Separation of Concern (SoC)</h3>
+          <p>
+            A design principle of separating a program into sections, with each section having a singular concern.
+          </p>
+        </article>
+
+        <article class="chapter-sub-section">
+          <h3 class="chapter-sub-section-heading">Don't Repeat Yourself (DRY) (Modular Design)</h3>
+          <p>
+            When Separation of Concern is adhered to strongly enough, sections of a program can be re-used,
+            thereby reducing the amount of repetative code.
+          </p>
+        </article>
+
         <p>
-          The style 'text-align: center' positions the text at the center of
-          parent element.
+          With 'Modular Design' in mind, the best to worst approach would be external, 
+          internal and then inline CSS.
         </p>
+      </article>
+
+      <article class="chapter">
+        <h2 class="chapter-heading">Ch 24. Styling Text</h2>
+        <article class="chapter-sub-section">
+          <h3 class="chapter-sub-section-heading">A Selection of Properties</h3>
+          <ul>
+            <li><code>color</code></li>
+            <li><code>font-family</code></li>
+            <li><code>font-size</code></li>
+            <li><code>font-style</code></li>
+            <li><code>line-height</code></li>
+            <li><code>text-align</code></li>
+            <li><code>text-transform</code></li>
+          </ul>
+        </article>
+        <p>Serif means those short, spike-like edges of text.</p>
         <p>The default font-size is 16px.</p>
+        <p>
+          It's not about memorizing every property, since therea rea so many, rather get
+          to know what is possible with CSS, and in time, you will memorize properties that 
+          you use a lot.
+        </p>
       </article>
   
       <article class="chapter">
         <h2 class="chapter-heading">Ch. 25 Combining Selectors</h2>
-        <section class="chapter-sub-section">
+        <article class="chapter-sub-section">
+          <h3 class="chapter-sub-section-heading">Why Combine Selectors?</h3>
+          <p>It reduces the repetativeness of writing CSS (DRY).</p>
+        </article>
+
+        <article class="chapter-sub-section">
+          <h3 class="chapter-sub-section-heading">List-Selectors</h3>
           <p>
-            A list of selectors can be supplied for a CSS rule (known as a
-            'list-selector').
+            A list of selectors supplied for a CSS rule, whereby every match, for example:
           </p>
-          <p>
-            A string of selectors, separated by white-space, can be supplied for a
-            CSS rule (known as a 'descendent-selector').
-          </p>
-        </section>
-  
+          <code>
+<pre>h1, h2, h3, h4, p, li {
+...
+}</pre>
+          </code>
+        </article>
+        
         <article class="chapter-sub-section">
           <h3 class="chapter-sub-section-heading">Descendent-Selectors</h3>
+          <p>
+            A string of selectors, separated by white-space, supplied for a
+            CSS rule, for example:
+          </p>
+            <code>
+<pre>p strong {
+  ...
+}</pre>
+          </code>
           <p>
             Descendent-selectors are incredibly useful, but if it is written as to
             reflect the HTML structure, it will lead to code that is harder to
